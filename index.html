@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>DT-Designs | Global Prestige AI Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    @font-face {
+      font-family: 'IBMPlexSansArabicLocal';
+      src: url('./fonts/ibm-plex-sans-arabic-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'IBMPlexSansArabicLocal';
+      src: url('./fonts/ibm-plex-sans-arabic-regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'RajdhaniLocal';
+      src: url('./fonts/rajdhani.woff2') format('woff2');
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'AmiriLocal';
+      src: url('./fonts/amiri-quran.woff2') format('woff2');
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --midnight-blue: #020617;
+      --light-bg: #f8fafc;
+      --neon-blue: #00f5ff;
+      --electric-blue: #0ea5e9;
+      --royal-blue: #1e3a8a;
+      --gold-premium: #D4AF37;
+      --gold-deep: #854d0e;
+      --text-dark: #f1f5f9;
+      --text-light: #000000;
+    }
+
+    * {
+      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    input, textarea, .variation-text {
+      user-select: text !important;
+    }
+
+    body {
+      overscroll-behavior: none;
+      touch-action: manipulation;
+      font-family: 'IBMPlexSansArabicLocal', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    body.dark { background-color: var(--midnight-blue); color: var(--text-dark); }
+    body.light { background-color: var(--light-bg); color: var(--text-light); }
+
+    .glass-premium {
+      backdrop-filter: blur(25px) saturate(200%);
+      -webkit-backdrop-filter: blur(25px) saturate(200%);
+    }
+
+    body.dark .glass-premium { background: rgba(15, 23, 42, 0.75); }
+    body.light .glass-premium { background: rgba(255, 255, 255, 0.85); }
+
+    .font-prestige-ar { font-family: 'IBMPlexSansArabicLocal', sans-serif; }
+    .font-prestige-latin { font-family: 'RajdhaniLocal', 'Rajdhani', sans-serif; }
+    .font-amiri { font-family: 'AmiriLocal', 'Amiri', serif; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    @keyframes rotate-neon { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .neon-revolving-wrapper { position: relative; padding: 2px; overflow: hidden; border-radius: 2.5rem; z-index: 0; }
+    body.dark .neon-revolving-wrapper::before {
+      content: ''; position: absolute; width: 250%; height: 250%;
+      background: conic-gradient(from 0deg, transparent 0deg, #D4AF37 20deg, #FFD700 40deg, transparent 60deg, transparent 180deg, #D4AF37 200deg, #FFD700 220deg, transparent 240deg);
+      animation: rotate-neon 8s linear infinite; top: -75%; left: -75%; z-index: -1;
+    }
+    .neon-inner-surface { border-radius: calc(2.5rem - 2px); height: 100%; width: 100%; }
+    body.dark .neon-inner-surface { background: #020617; }
+    body.light .neon-inner-surface { background: #ffffff; }
+
+    .gold-text { color: var(--gold-premium); }
+    .gold-text-strong { color: var(--gold-premium); }
+    .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #B8860B 100%); }
+
+    /* Ultra-Premium Glow Effects */
+    .heavy-glow-gold { filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6)); }
+    .heavy-glow-cyan { filter: drop-shadow(0 0 25px rgba(0, 245, 255, 0.6)); }
+    
+    .text-shadow-3d { 
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.5), 
+                   2px 2px 0px rgba(0,0,0,0.4), 
+                   3px 3px 0px rgba(0,0,0,0.3);
+    }
+    
+    .neon-input-premium { transition: all 0.3s ease; }
+    body.dark .neon-input-premium { background: rgba(30, 41, 59, 0.5); border-color: rgba(212, 175, 55, 0.2); color: white; }
+    body.light .neon-input-premium { background: #ffffff; border-color: rgba(30, 58, 138, 0.15); color: var(--text-light); }
+
+    /* Dropdown Readability Fix (The Prestige Correction) */
+    select option, select optgroup {
+      font-family: 'IBMPlexSansArabicLocal', sans-serif;
+      font-weight: bold;
+      padding: 15px;
+    }
+
+    body.dark select option, body.dark select optgroup {
+      background-color: #0f172a !important; /* Slate 900 */
+      color: #f8fafc !important; /* Slate 50 */
+    }
+
+    body.light select option, body.light select optgroup {
+      background-color: #ffffff !important;
+      color: #020617 !important; /* Midnight Blue */
+    }
+
+    select option:hover, select option:focus, select option:active, select option:checked {
+      background-color: var(--gold-premium) !important;
+      color: #000000 !important;
+    }
+
+    @keyframes pulse-glow-slow {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.1); opacity: 0.5; }
+    }
+    .floating-glow-bg {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: -1;
+      animation: pulse-glow-slow 10s infinite ease-in-out;
+    }
+
+    @keyframes blink-fade { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+    .animate-blink-fade { animation: blink-fade 3s infinite ease-in-out; }
+
+    /* Staggered Cards Support */
+    .prestige-card-hover { transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .prestige-card-hover:hover { transform: translateY(-8px) scale(1.03); }
+
+    /* Prestige Hexagon Architecture */
+    .hexagon-frame {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .hexagon-frame:hover {
+      clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+    }
+    .expertise-glow-google {
+      filter: drop-shadow(0 0 15px rgba(66, 133, 244, 0.4));
+    }
+    .expertise-glow-google:hover {
+      filter: drop-shadow(0 0 30px rgba(66, 133, 244, 0.7));
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "framer-motion": "https://esm.sh/framer-motion@^11.0.0",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
+</head>
+<body class="selection:bg-[#D4AF37]/30 selection:text-white dark">
+  <div id="root"></div>
+</body>
+</html>

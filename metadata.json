@@ -1,0 +1,41 @@
+{
+  "name": "Copy of DT-Designs Caption Generator",
+  "description": "Premium AI social media caption generator for Moroccan businesses. Luxurious dark mode interface with gold accents.",
+  "requestFramePermissions": [],
+  "localizationTree": {
+    "ar": {
+      "dialects": [
+        "MA",
+        "EG",
+        "SA",
+        "TN",
+        "PS",
+        "DZ",
+        "LY",
+        "YE",
+        "IQ",
+        "LB",
+        "FUSHA"
+      ],
+      "follow_us_msg": {
+        "moroccan": "باش تتابع المزيد من النصائح الاحترافية فالتسويق فابور، تابع صفحة DT-Designs بالضغط هنا",
+        "egyptian": "عشان تتابع نصايح تسويقية احترافية تانية مجاناً، تابع صفحة DT-Designs بالضغط هنا",
+        "gulf": "لمتابعة المزيد من النصائح الاحترافية في التسويق مجاناً، تابعوا صفحة DT-Designs بالضغط هنا",
+        "palestinian": "لمتابعة نصائح تسويقية احترافية أكثر ومجانية، تابعوا صفحة DT-Designs بالضغط هنا",
+        "fusha": "لمتابعة المزيد من النصائح الاحترافية في التسويق مجاناً، تابعوا صفحة DT-Designs بالضغط هنا"
+      }
+    },
+    "en": "Standard",
+    "fr": "Standard",
+    "tr": "Standard",
+    "fa": "Standard",
+    "es": "Standard",
+    "de": "Standard",
+    "it": "Standard",
+    "ru": "Standard",
+    "pt": "Standard",
+    "zh": "Standard",
+    "nl": "Standard",
+    "ku": "Standard"
+  }
+}

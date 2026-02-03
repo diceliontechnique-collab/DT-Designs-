@@ -1,0 +1,54 @@
+
+{
+  "name": "dt-designs-ai",
+  "version": "1.0.0",
+  "main": "electron-main.js",
+  "description": "Premium AI Caption Generator - Desktop Edition",
+  "author": "DicelionTechnique © 2001-2026",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:start": "electron .",
+    "electron:build": "electron-builder"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "@google/genai": "^1.38.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "terser": "^5.24.0",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35"
+  },
+  "build": {
+    "appId": "com.dicelion.dt-designs-ai",
+    "productName": "DT-Designs AI",
+    "copyright": "Copyright © 2001-2026 DicelionTechnique",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "portable": {
+      "artifactName": "${productName}_Portable_${version}.${ext}",
+      "requestExecutionLevel": "user"
+    },
+    "files": [
+      "dist/**/*",
+      "electron-main.js",
+      "preload.js",
+      "assets/**/*"
+    ],
+    "asar": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "appId": "com.dt-designs.captiongenerator",
+  "appName": "DT-Designs AI",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
